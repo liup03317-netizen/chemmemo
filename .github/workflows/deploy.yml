@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 当代码推送到 main 分支时自动触发部署
+  push:
+    branches:
+      - main
+  # 允许在 GitHub Actions 面板手动触发部署
+  workflow_dispatch:
+
+# 权限设置
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 并发配置：取消正在进行的旧部署，只部署最新的提交
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        run: pnpm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 指定上传 dist 文件夹（Vite 默认构建产物目录）
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

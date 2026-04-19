@@ -1,0 +1,88 @@
+<h2>学习效果增强：入口与信息架构</h2>
+<p class="subtitle">请选择你更喜欢的“错题本/复习/SRS/统计”入口方案（点击卡片选择）。</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">方案 A：地图页顶部“今日复习”卡片</div>
+        <div class="mockup-body">
+          <div class="mock-nav">ChemMemo | 🔥3 | ❤️5 | ⭐120</div>
+          <div class="placeholder" style="margin:12px 0;padding:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div class="label">今日复习</div>
+                <div style="font-weight:800;font-size:18px;margin-top:4px">12 张卡片待复习</div>
+                <div style="color:#667085;margin-top:2px">错因：条件 4｜符号 3｜配平 5</div>
+              </div>
+              <button class="mock-button">开始</button>
+            </div>
+          </div>
+          <div class="placeholder">章节地图（现有路径）</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>地图页卡片入口</h3>
+      <p>最少改动、最容易看到；适合“每天先复习再闯关”。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">方案 B：新增底部 Tab「复习」</div>
+        <div class="mockup-body">
+          <div class="placeholder">复习页：SRS 队列 + 错题本 + 统计</div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <div class="placeholder" style="flex:1;padding:10px">
+              <div class="label">SRS 队列</div>
+              <div style="font-weight:800">今日 12｜明日 18</div>
+            </div>
+            <div class="placeholder" style="flex:1;padding:10px">
+              <div class="label">弱点</div>
+              <div style="font-weight:800">条件 62%｜符号 70%</div>
+            </div>
+          </div>
+          <div class="mock-nav" style="margin-top:14px">🏠 学习 | 📒 复习 | 👤 档案</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>独立复习 Tab</h3>
+      <p>结构清晰；复习体系可逐步做深（错题本/SRS/统计都放这里）。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">方案 C：闯关后“复习巩固”强引导</div>
+        <div class="mockup-body">
+          <div class="placeholder" style="padding:12px">
+            <div style="font-size:20px;font-weight:900">本关错因汇总</div>
+            <div style="margin-top:6px;color:#667085">缺条件 1｜缺符号 2｜配平 1</div>
+            <div class="placeholder" style="margin-top:10px;padding:10px">
+              <div class="label">建议复习</div>
+              <div style="font-weight:800">优先：符号（↑/↓）与条件</div>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <button class="mock-button" style="flex:1">立即复习（6题）</button>
+              <button class="mock-button" style="flex:1">返回地图</button>
+            </div>
+          </div>
+          <div class="placeholder" style="margin-top:12px">（可选）复习队列预览</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>闯关后强引导</h3>
+      <p>最能提升学习闭环；适合应试导向，但会增加流程强度。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="subtitle">你也可以在终端补充：希望“复习”更偏强制提醒还是偏自主？</p>
+</div>
+

@@ -1,0 +1,96 @@
+import { Level } from '../types';
+import { equations } from './equations';
+
+export const initialLevels: Level[] = [
+  {
+    id: 'lvl-chuzhong-2',
+    title: '第二单元：我们周围的空气',
+    equations: ["eq-p-o2", "eq-s-o2", "eq-c-o2", "eq-fe-o2", "eq-h2o2-o2", "eq-kmno4-o2", "eq-kclo3-o2"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-4',
+    title: '第四单元：自然界的水',
+    equations: ["eq-h2o-electrolysis", "eq-h2-o2"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-6',
+    title: '第六单元：碳和碳的氧化物',
+    equations: ["eq-c-o2-incomp", "eq-c-co2", "eq-co-o2", "eq-co-cuo", "eq-co-fe2o3", "eq-c-cuo", "eq-caco3-hcl", "eq-co2-h2o", "eq-h2co3-decomp", "eq-co2-caoh2"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-7',
+    title: '第七单元：燃料及其利用',
+    equations: ["eq-ch4-o2", "eq-c2h5oh-o2"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-8',
+    title: '第八单元：金属和金属材料',
+    equations: ["eq-mg-o2", "eq-al-o2", "eq-cu-o2", "eq-zn-h2so4", "eq-fe-hcl", "eq-mg-hcl", "eq-fe-cuso4", "eq-cu-agno3"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-10',
+    title: '第十单元：酸和碱',
+    equations: ["eq-naoh-hcl", "eq-caoh2-h2so4", "eq-fe2o3-hcl", "eq-fe2o3-h2so4", "eq-cuo-h2so4", "eq-naoh-so2", "eq-naoh-so3"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-chuzhong-11',
+    title: '第十一单元：盐 化肥',
+    equations: ["eq-na2co3-hcl", "eq-nahco3-hcl", "eq-na2co3-caoh2", "eq-nacl-agno3", "eq-bacl2-h2so4", "eq-nh4no3-naoh"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-gaozhong-b1-2',
+    title: '必修一·第二章：海水中的重要元素—钠和氯',
+    equations: ["eq-hs-na-o2-room", "eq-hs-na-o2-heat", "eq-hs-na-h2o", "eq-hs-na2o2-h2o", "eq-hs-na2o2-co2", "eq-hs-nahco3-heat", "eq-hs-na2co3-co2-h2o", "eq-hs-cl2-h2", "eq-hs-cl2-cu", "eq-hs-cl2-fe", "eq-hs-cl2-h2o", "eq-hs-hclo-light", "eq-hs-cl2-naoh", "eq-hs-cl2-caoh2"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-gaozhong-b1-3',
+    title: '必修一·第三章：铁 金属材料',
+    equations: ["eq-hs-fe-h2o", "eq-hs-feo-hcl", "eq-hs-fe2o3-hcl", "eq-hs-fecl2-cl2", "eq-hs-fecl3-fe", "eq-hs-fecl3-cu", "eq-hs-feoh2-o2-h2o", "eq-hs-al-o2", "eq-hs-al-naoh", "eq-hs-al2o3-naoh", "eq-hs-aloh3-naoh"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-gaozhong-b2-5',
+    title: '必修二·第五章：化工生产中的重要非金属元素',
+    equations: ["eq-hs-s-o2", "eq-hs-so2-o2", "eq-hs-so2-h2o", "eq-hs-cu-h2so4-conc", "eq-hs-c-h2so4-conc", "eq-hs-n2-h2", "eq-hs-n2-o2", "eq-hs-no-o2", "eq-hs-no2-h2o", "eq-hs-nh3-h2o", "eq-hs-nh3-hcl", "eq-hs-nh3-o2", "eq-hs-cu-hno3-dil", "eq-hs-cu-hno3-conc", "eq-hs-c-hno3-conc"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-gaozhong-b2-7',
+    title: '必修二·第七章：有机化合物',
+    equations: ["eq-hs-ch4-cl2", "eq-hs-c2h4-br2", "eq-hs-c2h4-h2o", "eq-hs-c2h5oh-o2-cu", "eq-hs-ch3cooh-na2co3", "eq-hs-esterification"],
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-zhongkao',
+    title: '终极挑战：中考模拟',
+    equations: equations.filter(eq => !eq.id.includes('hs-')).map(eq => eq.id),
+    isUnlocked: true,
+    isCompleted: false,
+  },
+  {
+    id: 'lvl-gaokao',
+    title: '终极挑战：高考模拟',
+    equations: equations.map(eq => eq.id),
+    isUnlocked: true,
+    isCompleted: false,
+  },
+];

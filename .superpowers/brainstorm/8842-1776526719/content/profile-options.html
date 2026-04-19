@@ -1,0 +1,57 @@
+<h2>为“档案”页增加哪些内容？</h2>
+<p class="subtitle">基于我们已有的数据（连胜、错误标签、方程式掌握度），这里有几个不同侧重点的设计方向：</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>方案 A：掌握度矩阵 (Progress Focus)</h3>
+      <p>侧重于展示“你学会了多少”。通过进度条展示各个章节（如“氧气”、“金属”）的方程式掌握比例（未学习 / 学习中 / 已掌握）。</p>
+      <div style="margin-top: 10px; background: #f3f4f6; padding: 10px; border-radius: 8px;">
+        <div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;">第八单元：金属和金属材料</div>
+        <div style="height: 8px; background: #e5e7eb; border-radius: 4px; display: flex; overflow: hidden;">
+          <div style="width: 40%; background: #58CC02;"></div>
+          <div style="width: 20%; background: #FFC800;"></div>
+        </div>
+        <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">40% 已掌握 | 20% 学习中</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>方案 B：薄弱点诊断 (Weakness Focus)</h3>
+      <p>侧重于展示“你哪里容易错”。汇总历史错题标签（如配平错误、条件遗漏、符号错误），用雷达图或横向柱状图指出学生的具体知识盲区。</p>
+      <div style="margin-top: 10px; background: #f3f4f6; padding: 10px; border-radius: 8px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;"><span>反应条件易忘</span> <span style="color: #FF4B4B;">12次错误</span></div>
+        <div style="height: 6px; background: #e5e7eb; border-radius: 3px;"><div style="width: 80%; background: #FF4B4B; height: 100%; border-radius: 3px;"></div></div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-top: 6px; margin-bottom: 4px;"><span>配平错误</span> <span style="color: #FF9600;">5次错误</span></div>
+        <div style="height: 6px; background: #e5e7eb; border-radius: 3px;"><div style="width: 35%; background: #FF9600; height: 100%; border-radius: 3px;"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>方案 C：学习日历与动态徽章 (Habit Focus)</h3>
+      <p>侧重于“坚持”。引入类似 GitHub 的学习贡献图（绿点日历），记录每天的复习量；并将现有的成就系统升级为随数据动态解锁的徽章库。</p>
+      <div style="margin-top: 10px; background: #f3f4f6; padding: 10px; border-radius: 8px; display: flex; gap: 4px; justify-content: center;">
+        <div style="width: 12px; height: 12px; background: #e5e7eb; border-radius: 2px;"></div>
+        <div style="width: 12px; height: 12px; background: #58CC02; border-radius: 2px; opacity: 0.4;"></div>
+        <div style="width: 12px; height: 12px; background: #58CC02; border-radius: 2px; opacity: 0.7;"></div>
+        <div style="width: 12px; height: 12px; background: #58CC02; border-radius: 2px;"></div>
+        <div style="width: 12px; height: 12px; background: #e5e7eb; border-radius: 2px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="d" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>方案 D：全能综合看板 (Comprehensive)</h3>
+      <p>将上述三者（章节进度、易错点分析、学习日历）浓缩整合到一个长列表中，向下滚动即可全面了解自己的学习画像。</p>
+    </div>
+  </div>
+</div>
