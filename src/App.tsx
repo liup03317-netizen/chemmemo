@@ -16,7 +16,7 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/chemmemo">
       <div className="min-h-screen bg-[#F7F7F7] font-sans text-[#4B4B4B]">
         <Routes>
           <Route path="/auth" element={<Auth />} />
